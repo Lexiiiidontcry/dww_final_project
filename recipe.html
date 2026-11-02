@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pan Seared Steak - À Point</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Italiana&family=Source+Serif+4:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+
+
+</head>
+
+
+<body>
+
+<header class="site-header recipe-header">
+    <a href="index.html" class="logo">
+        <span>À</span>
+        <span>Point</span>
+    </a>
+
+    <!-- breadcrumb = show where you are on the site -->
+    <nav class="breadcrumb">
+            <a href="index.html">home</a> &gt;
+            <a href="#">All recipes</a> &gt;
+            <a href="#">Classic Dinner</a>
+    </nav>
+</header>
+
+<!-- two-column layout for recipe content -->
+<div class="recipe-layout">
+
+    <!--  LEFT column -->
+<div class="recipe-content">
+    <h1>Pan Seared Steak</h1>
+
+    <div class="recipe-actions">
+        <a href="#recipe" class="btn btn-filled">Jump to Recipe ↓</a>
+        <button class="btn btn-outline" id="saveBtn">Save <span>♥</span></button>
+        <button class="btn btn-outline" id="rateBtn">Rate <span>★</span></button>
+    </div>
+
+
+<!-- p is a paragraph of text -->
+    <p class="intro">
+        Garlic and rosemary butter turns this pan-seared steak into something worth lingering over. It has a deep, caramelised crust and a tender, juicy centre, and it's easier than you'd think.
+    </p>
+
+    <img class="recipe-photo" src="https://www.cookingclassy.com/wp-content/uploads/2022/07/grilled-steak-15.jpg"  alt="Steak with rosemary butter">
+    <h2>The Best Pan-seared Steak </h2>
+
+    <p>
+        Ready in 20 minutes, all in one pan, with no oven needed. This is the steak we come back to all year round: quick, simple, and finished with a garlic butter you'll want to spoon over everything.
+    </p>
+
+    <!-- "Jump to recipe" scrolls down to here-->
+     <div id="recipe" class="recipe-steps">
+        <h2>Recipe</h2>
+
+    <!-- ul is list with bullet points, ol is numbered list, each items inside goes in an li-->
+        <h3>Ingredients</h3>
+        <ul>
+            <li>2 steaks, about 3 cm thick</li>
+            <li>1 teaspoon kosher salt</li>
+            <li>1/2 teaspoon freshly ground black pepper</li>
+            <li>1 tablespoon olive oil</li>
+            <li>2 tablespoons unsalted butter</li>
+            <li>2 cloves garlic, smashed</li>
+            <li>2 sprigs fresh rosemary</li>
+        </ul>
+
+        <h3>Steps</h3>
+        <ol>
+            <li>Take the steaks out of the fridge and let them come to room temperature for about 30 minutes.</li>
+            <li>Season both sides of the steaks with salt and pepper.</li>
+            <li>Heat a cast-iron skillet over high heat until very hot. Add olive oil.</li>
+            <li>Place the steaks in the skillet and sear for 3-4 minutes on each side for medium-rare, or until desired doneness.</li>
+            <li>Add butter, garlic, and rosemary to the skillet. Spoon the melted butter over the steaks for extra flavor.</li>
+            <li>Remove the steaks from the skillet and let them rest for 5 minutes before slicing and serving.</li>
+        </ol>
+        </div>
+        </div>   
+
+
+    <!-- RIGHT column -->
+<div class="device-panel">
+        <div class="logo panel-logo">
+            <span>À</span>
+            <span>Point</span>
+        </div>
+
+<!-- live temperature from the thermometer (js will fill this in) -->
+<div class="device-status">
+    <button id="connectBtn">Connect thermometer</button>
+    <p id="statusText">Not connected</p>
+    <p class="temp-display"><span id="tempValue">--</span>°C</p>
+</div>
+
+<!--Doneness, the user can only pick one-->
+<h3 class="panel-title">SETTINGS </h3>
+<div class="options">
+    <div class="options two-col">
+     <label><input type="radio" name="doneness" value="46"> Blue</label>
+                <label><input type="radio" name="doneness" value="63"> Medium</label>
+                <label><input type="radio" name="doneness" value="52" checked> Rare</label>
+                <label><input type="radio" name="doneness" value="68"> Medium well</label>
+                <label><input type="radio" name="doneness" value="57"> Medium rare</label>
+                <label><input type="radio" name="doneness" value="custom"> Custom</label>
+</div>
+
+ <!-- ALERT SOUND: you can only pick one -->
+            <h3 class="panel-title">Alert</h3>
+            <div class="options">
+                <label><input type="radio" name="sound" value="cicada" checked> Cicada</label>
+                <label><input type="radio" name="sound" value="bell"> Bell tower</label>
+                <label><input type="radio" name="sound" value="dew"> Morning dew</label>
+            </div>
+
+<!-- ON / OFF SWITCHES -->
+            <label class="switch-row">
+                
+Pre alert
+            <input type="checkbox" id="preAlert" checked>
+            </label>
+            <p class="hint">"5°C to go": warns you when it's ALMOST time</p>
+
+            <label class="switch-row">
+
+Alert on website
+            <input type="checkbox" id="webAlert" checked>
+            </label>
+            <p class="hint">Receive alerts when the steak is done on BOTH the device &amp; the website</p>
+        </div>
+        </div>  
+    
+    
+</body>
+</html>

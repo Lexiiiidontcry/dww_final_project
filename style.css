@@ -1,0 +1,425 @@
+
+/* ===== COLOURS (change them here, they update everywhere) ===== */
+:root {
+    --cream: #FDF4E7;
+    --terracotta: #C8684A;
+    --brick: #B93A1E;
+    --logo-red: #E5392A;
+    --yellow: #F3D46B;
+    --blue: #2F45C5;
+    --ink: #1A1A1A;
+}
+
+/*   SETTINGS  */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--cream);
+    color: var(--ink);
+    font-family: "Source Serif 4", Georgia, serif;
+}
+
+
+/* a=all the links on the page, targets all the a hrefs*/
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+/* HEADER*/
+.site-header {
+    border-bottom: 4px solid var(--brick); 
+}
+
+/* every link inside the element with class main-nav*/
+/*only the menu links get this style, othere are not affected*/
+.main-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 24px 40px;
+}
+
+.main-nav a{
+    font-weight: 600;
+    font-size: 15px;
+}
+
+/*when the mouse is over it*/
+/*when the mouse is over the menu link, its color changes*/
+.main-nav a:hover {
+    color: var(--brick);
+}
+
+.search-btn{
+    background: none;
+    border: none;
+    padding: 0;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* LOGO */
+.logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: "Italiana", serif;
+    color: var(--logo-red);
+    font-size: 40px;
+    line-height: 0.9;
+    transform: rotate(-6deg);
+}
+
+/* the first span inside the logo, which is the “À”. It will be a little smaller*/
+.logo span:first-child {
+    font-size: 30px;
+}
+
+.main-nav .logo{
+    font-weight: 400;
+    font-size: 40px;
+}
+
+/* Home Page*/
+.section-title{
+    text-align: center;
+    font-size: 28px;
+    letter-spacing: 1px;
+    margin: 48px 
+}
+
+
+/*display:grid is like flex but for rows and columns*/
+/*grid-template-columns: repeat(4, 1fr) makes 4 equal columns, 1fr means 1 fraction of the available space*/
+.recipe-band{
+    background-color: var(--terracotta);
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+    padding: 28px 40px 32px;
+
+}
+
+/* RECIPE CARD */
+
+/*card-img is the frame*/
+.card-img{
+    position: relative;
+    aspect-ratio: 3/4;
+    overflow: hidden;
+}
+
+/*card-img img is the image inside the frame*/
+/*transform 0.4s means it will take 0.4 to smoothly zoom in when hovering over the image*/
+.card-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s;
+}
+
+.recipe-card:hover .card-img img{
+    transform: scale(1.05);
+}
+
+.tag{
+    position: absolute;
+    left: 0;
+    bottom:0;
+    background-color: var(--cream);
+    color: var(--brick);
+    font-size: 11px;
+    padding: 4px 8px;
+}
+
+.card-stats{
+    display: flex;
+    justify-content: space-between;
+    color: var(--yellow);
+    font-size: 11px;
+    margin: 8px 0 6px;
+  
+}
+
+/*font weight controls how thick the text is, 600 is semi-bold*/
+.recipe-card h2{
+    color: var(--cream);
+    font-size: 18px;
+    font-weight: 600;
+}
+
+
+/* RECIPE PAGE */
+.recipe-header{
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    padding: 20px 28px;
+}
+
+.recipe-header .logo{
+    font-size: 26px;    
+}
+
+.recipe-header .logo span:first-child{
+    font-size: 20px;
+}
+
+.breadcrumbs{
+    font-size: 13px;
+
+}
+
+.breadcrumbs a:hover{
+    text-decoration: underline;
+}
+
+/*here we are going to create two colums side by side*/
+/*grid-template-columns: 1fr 340px makes two columns. The right one takes 340px and the left takes the remaining space*/
+/*min-height 100vh makes it at leasr as tall as the screen*/
+/*100vh = 100% of the screen height*/
+.recipe-layout{
+    display: grid;
+    grid-template-columns: 1fr 340px;
+    min-height: 100vh;
+}
+
+.recipe-content{
+    padding: 32px 40px 60px;
+    max-width: 760px;
+}
+
+.recipe-content h1{
+    font-size: 30px;
+    margin-bottom: 14px;
+}
+
+.recipe-content h2{
+    font-size: 16px;
+    margin: 28px 0 10px;
+}
+
+.recipe-content p{
+    line-height: 1.6;
+    margin-bottom: 13px;
+}
+
+.recipe-content .intro{
+    font-size: 15px;
+    font-weight: 600;
+    margin: 24px 0 20px;
+}
+
+recipe-actions{
+    display:flex;
+    gap: 6px;
+}
+
+/*here we style the buttons*/
+/*font-family makes sure it doesn't use the page default font*/
+/*cursor: shows a hand when hovering over the button*/
+.btn{
+    font-family: inherit;
+    font-size: 11px;
+    font-weight: 600;
+    padding: 4px 8px;
+    cursor: pointer;
+}
+
+/*adds the color to the buttons*/
+.btn-filled{
+    background-color: var(--brick);
+    color: var(--cream);
+    border: 1px solid var(--brick);
+}
+
+/*Save and Rate: blue outline+blue text*/
+.btn-outline{
+    background-color: transparent;
+    color: var(--blue);
+    border: 1px solid var(--blue);
+}
+
+/*the heart and the star are red*/
+.btn-outline span{
+    color:var(--brick);
+    margin-left: 4px;
+}
+
+
+/*here we are styling the photos and. the recipe box*/
+/*aspect-ratio 1/1 makes it a square*/
+.recipe-photo{
+    width: 200px;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+}
+
+.recipe-steps{
+    margin-top: 40px;
+    padding: 24px;
+    border: 1px solid var(--brick);
+    font-size: 14px;
+}
+
+.recipe-steps h3{
+    font-size: 14px;
+    margin: 16px 0 6px;
+}
+
+.recipe-steps ul,
+.recipe-steps ol{
+    padding-left: 20px;
+}
+
+.recipe-steps li{
+    margin-bottom: 4px;
+}
+
+/*DEVICE PANEL*/
+.device-panel{
+    background-color: var(--brick);
+    color: var(--cream);
+    padding: 28px 28px 40px 36px;
+    font-size: 12px;
+}
+
+.panel-logo{
+    color: var(--yellow);
+    font-size: 28px;
+    align-items: flex-start;
+    margin-bottom: 24px;
+
+}
+
+.panel-logo span:first-child{
+    font-size: 22px;
+}
+
+.panel-title{
+    color: var(--yellow);
+    font-size: 14px;
+    font-weight: 400;
+    margin: 24px 0 12px;
+}
+
+.options{
+    display: grid;
+    gap: 10px;
+}
+
+/* this targets the element that has BOTH classes => Only "doneness" has both, so only it gets two columns.*/
+.options.two-col{
+    grid-template-columns: 1fr 1fr;
+}
+
+.options label{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+}
+
+/* here we turn the round radio dots into little squares*/
+/*input[type="radio"] targets the radio buttons*/
+.options input[type="radio"]{
+    appearance: none;
+    width: 10px;
+    height: 10px;
+    background-color: #DDDDDD;
+    cursor: pointer;
+}
+
+.options input[type="radio"]:checked{
+    background-color: var(--yellow);
+}
+
+/*now we turn the checkboxes into little switches*/
+.switch-row{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: var(--yellow);
+    margin-top: 24px;
+    cursor: pointer;
+}
+
+.switch-row input{
+    appearance: none;
+    position: relative;
+    width: 22px;
+    height: 8px;
+    background-color: #DDDDDD;
+    border-radius: 4px;
+    cursor: pointer;
+   
+}
+
+/*here we add the little round knob*/
+/*::before creates an extra shape inside the element*/
+/*we have to add content:"", otherwise it won't appear*/
+/*transition makes the move SLIDE instead of jump*/
+.switch-row input::before{
+    content: "";
+    position: absolute;
+    top: 1px;
+    left: 2px;
+    width: 6px;
+    height: 6px;
+    background-color: var(--brick);
+    border-radius: 50%;
+    transition: left 0.2s;
+}
+
+/*when we switch ON: yellow track, knob moves right*/
+.switch-row input:checked{
+    background-color: var(--yellow);
+}
+
+.switch-row input:checked::before{
+    left: 14px;
+}
+
+.hint{
+    margin-top: 8px;
+}
+
+/*The Thermometer box*/
+
+.device-status {
+    border: 1px solid var(--cream);
+    padding: 14px;
+}
+
+#connectBtn {
+    background-color: var(--yellow);
+    color: var(--brick);
+    border: none;
+    font-family: inherit;
+    font-weight: 600;
+    padding: 6px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+#statusText {
+    margin-top: 8px;
+}
+
+.temp-display {
+    font-size: 32px;
+    margin-top: 8px;
+}
+
