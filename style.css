@@ -1,5 +1,6 @@
 
-/* ===== COLOURS (change them here, they update everywhere) ===== */
+/*  COLOURS */
+/*we identity the colors here, and they will update everywhere*/
 :root {
     --cream: #FDF4E7;
     --terracotta: #C8684A;
@@ -222,7 +223,7 @@ img {
     margin: 24px 0 20px;
 }
 
-recipe-actions{
+.recipe-actions{
     display:flex;
     gap: 6px;
 }
@@ -263,6 +264,8 @@ recipe-actions{
     background-color: var(--blue);
     color: var(--cream);
 }
+
+
 
 
 
