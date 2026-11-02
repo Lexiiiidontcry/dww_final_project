@@ -258,6 +258,13 @@ recipe-actions{
     margin-left: 4px;
 }
 
+/*when you click the buttons, they will turn blue*/
+.btn-outline.is-active {
+    background-color: var(--blue);
+    color: var(--cream);
+}
+
+
 
 /*here we are styling the photos and. the recipe box*/
 /*aspect-ratio 1/1 makes it a square*/
@@ -422,4 +429,19 @@ recipe-actions{
     font-size: 32px;
     margin-top: 8px;
 }
+
+/*  WEBSITE ALERT  */
+/* with position:fixed we keep it at the top of the screen*/
+#alertBanner {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--yellow);
+    color: var(--brick);
+    font-weight: 700;
+    padding: 14px 24px;
+    border-radius: 8px;
+}
+
 
