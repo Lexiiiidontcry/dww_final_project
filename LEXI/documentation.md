@@ -24,3 +24,16 @@ My project consists of one temperature detector and a recipe website (but not on
 (https://www.figma.com/design/5iDQRk1PTeJPNLQgBVcobV/ChihYi-CHU_dww_project?node-id=1-47&t=gzf6IIDxuA65nfsc-1)
 
 ## Website 
+<picture>
+    <img
+        src="/Assets/Website_1.png" 
+        alt="Moodboard"   
+    />
+</picture>
+
+<picture>
+    <img
+        src="/Assets/Website_2.png" 
+        alt="Moodboard"   
+    />
+</picture>
