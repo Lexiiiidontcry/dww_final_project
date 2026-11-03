@@ -37,3 +37,7 @@ My project consists of one temperature detector and a recipe website (but not on
         alt="Moodboard"   
     />
 </picture>
+
+## Video
+[Link to video] (https://youtu.be/GxyEXg0-UNc?si=hObucFnDgrvmVHdt)
+
